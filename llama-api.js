@@ -5,7 +5,7 @@ export async function getInsights(text) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         model: "tinyllama", // or "mistral", "tinyllama", etc.
-      prompt: `Summarize the key ideas from the following text if you need external resources just summarize about title: (the first line of your response should always be "Sure, here's the summary of the data you provided:")
+      prompt: `Summarize the key ideas from the following text in a concise manner (maximum 150-200 words). Focus only on the most important context and key takeaways: (the first line of your response should always be "Sure, here's the summary of the data you provided:")
       ${text}`,
         stream: false
       })
