@@ -1,0 +1,34 @@
+{
+  "name": "mindtrace-watch-list-dashboard-app",
+  "version": "1.0.0",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node proxy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/homesh456babu/MindTrace_Watch_List_Dashboard_App.git"
+  },
+  "type": "module",
+  "keywords": [
+    "browser-extension",
+    "ollama",
+    "gemma",
+    "dashboard",
+    "automation"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/homesh456babu/MindTrace_Watch_List_Dashboard_App/issues"
+  },
+  "homepage": "https://github.com/homesh456babu/MindTrace_Watch_List_Dashboard_App#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {},
+  "description": "An automated, local-LLM powered reading and watch-list aggregator with browser extension support."
+}

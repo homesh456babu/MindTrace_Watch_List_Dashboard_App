@@ -1,0 +1,69 @@
+/* Popup Base Layout */
+body {
+  width: 480px;
+  padding: 12px;
+  font-family: system-ui, sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  color: #222;
+  background: #fff;
+}
+
+/* Title */
+h2 {
+  font-size: 1.4em;
+  margin-top: 0;
+  margin-bottom: 0.5em;
+}
+
+/* Section Headings */
+h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-size: 1.1em;
+  color: #333;
+}
+
+/* Scrollable list container */
+#list {
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+/* History Item Layout */
+b {
+  font-weight: 600;
+}
+
+i {
+  font-size: 0.85em;
+  color: #555;
+  display: block;
+  word-break: break-all;
+}
+
+/* Insight Box */
+.insight-box {
+  margin-top: 0.5em;
+  padding: 0.5em;
+  background: #f0f0f0;
+  border-radius: 8px;
+  font-size: 0.95em;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow: auto;
+}
+
+/* Fallback insight text before loading */
+.loading-insight {
+  margin-top: 0.5em;
+  color: gray;
+  font-size: 0.9em;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+}
