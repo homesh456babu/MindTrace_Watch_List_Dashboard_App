@@ -19,10 +19,11 @@ app.post("/api/generate", async (req, res) => {
     });
 
     const data = await ollamaRes.text(); // Ollama gives streamed/plain text sometimes
+    res.setHeader("Content-Type", "application/json");
     res.send(data);
   } catch (err) {
     console.error("❌ Proxy error:", err);
-    res.status(500).send("LLM proxy error");
+    res.status(500).json({ error: "LLM proxy error" });
   }
 });
 
