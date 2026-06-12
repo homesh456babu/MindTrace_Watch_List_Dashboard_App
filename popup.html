@@ -2,12 +2,72 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>MindTrace</title>
+  <title>MindTrace Dashboard</title>
   <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h2>MindTrace</h2>
-  <div id="list"></div>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="logo-area">
+        <span class="logo-emoji">🧠</span>
+        <div class="logo-text">
+          <h1>MindTrace</h1>
+          <p class="tagline">Local AI Reading & Watching Journal</p>
+        </div>
+      </div>
+      <button id="clear-btn" class="btn btn-danger" title="Clear all history">
+        Clear History
+      </button>
+    </header>
+
+    <!-- Stats Dashboard -->
+    <section class="stats-dashboard">
+      <div class="stat-card">
+        <span class="stat-icon">⏱️</span>
+        <div class="stat-info">
+          <span class="stat-value" id="stat-time">0m</span>
+          <span class="stat-label">Time Tracked</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon">📚</span>
+        <div class="stat-info">
+          <span class="stat-value" id="stat-read">0</span>
+          <span class="stat-label">Articles Read</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-icon">🎥</span>
+        <div class="stat-info">
+          <span class="stat-value" id="stat-watch">0</span>
+          <span class="stat-label">Videos Watched</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls: Search & Tabs -->
+    <section class="controls-panel">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-input" placeholder="Search history..." />
+      </div>
+      <div class="tabs-bar">
+        <button class="tab-btn active" data-tab="all">All</button>
+        <button class="tab-btn" data-tab="reading">📚 Reading</button>
+        <button class="tab-btn" data-tab="watching">🎥 Watching</button>
+      </div>
+    </section>
+
+    <!-- History List -->
+    <main class="content-area">
+      <div id="list" class="history-list"></div>
+    </main>
+  </div>
 
   <script type="module" src="popup.js"></script>
 </body>
